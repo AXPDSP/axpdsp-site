@@ -56,6 +56,36 @@ $primary-invert: $garnet-invert;
   height: 100px;
 }
 
+section.section-with-sidebar {
+  padding-left: 0rem;
+  padding-right: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+
+  .section-sidebar {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border-radius: 0px;
+
+    .title {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+.column.officer-headshots {
+  margin: 3rem;
+
+  .columns {
+    margin-top: 1rem;
+
+    .card.officer-headshot {
+      margin: 0 1rem;
+    }
+  }
+}
+
 // 4. Import the rest of Bulma
 
 

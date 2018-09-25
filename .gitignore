@@ -1,0 +1,6 @@
+.vscode/
+node_modules/
+
+## will unignore when ready to publish
+css/
+lib/
