@@ -56,6 +56,13 @@ $primary-invert: $garnet-invert;
   height: 100px;
 }
 
+.philanthropy-items {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 2px solid $grey-lighter;
+  border-bottom: 2px solid $grey-lighter;
+}
+
 section.section-with-sidebar {
   padding-left: 0rem;
   padding-right: 1rem;
@@ -72,6 +79,10 @@ section.section-with-sidebar {
       margin-bottom: auto;
     }
   }
+}
+
+.sidebar-title {
+  margin-top: 5rem;
 }
 
 .column.officer-headshots {
