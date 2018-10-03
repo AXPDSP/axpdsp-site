@@ -101,7 +101,7 @@ section.section-with-sidebar {
 
 
 @import "../node_modules/bulma/bulma";
-// @import "../node_modules/bulma-carousel/dist/css/bulma-carousel";
+@import "../node_modules/bulma-carousel/dist/css/bulma-carousel";
 @import "../node_modules/bulma-calendar/dist/css/bulma-calendar";
 
 .calendar {
@@ -110,4 +110,16 @@ section.section-with-sidebar {
 
 .calendar-footer-today {
   color: $info !important;
+}
+
+.carousel-navigation {
+  margin-top: 3rem;
+
+  .carousel-nav-slide-icons{
+    padding: 1em;
+  }
+
+  .carousel-nav-left, .carousel-nav-right {
+    cursor: pointer;
+  }
 }

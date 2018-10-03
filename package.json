@@ -26,7 +26,8 @@
     "deploy": "npm run css-deploy && npm run js-build",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
-    "start": "npm run css-watch | npm run js-watch"
+    "start": "npm run css-watch | npm run js-watch",
+    "postinstall": "cp node_modules/bulma-calendar/dist/js/bulma-calendar.min.js ./_javascript/bulma-calendar.min.js"
   },
   "keywords": [],
   "author": "",
