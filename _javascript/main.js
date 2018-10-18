@@ -1,3 +1,6 @@
+import bulmaCalendar from './bulma-calendar.min';
+import bulmaCarousel from './bulma-carousel-modified';
+
 document.addEventListener('DOMContentLoaded', () => {
 
   var carousels = bulmaCarousel.attach();
