@@ -123,3 +123,14 @@ section.section-with-sidebar {
     cursor: pointer;
   }
 }
+
+.content {
+  blockquote {
+    &.is-crow-quote {
+      color: $garnet-invert;
+      background: rgba($garnet, 0.8);
+      border-left: 5px solid $garnet;
+    }
+  }
+}
+
