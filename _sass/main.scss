@@ -134,3 +134,21 @@ section.section-with-sidebar {
   }
 }
 
+#recruitment-upcoming-events-list {
+  .upcoming-event-list-item {
+    padding: 1em;
+    background: $white-ter;
+    list-style: none;
+
+    &.upcoming-event-list-item-selected {
+      background: $cyan;
+      color: $white;
+    }
+    &:hover {
+      background: $turquoise;
+      color: $white;
+      border-radius: .25em;
+    }
+  }
+}
+
