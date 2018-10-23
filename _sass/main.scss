@@ -61,6 +61,10 @@ $primary-invert: $garnet-invert;
   padding: 1rem;
   border-top: 2px solid $grey-lighter;
   border-bottom: 2px solid $grey-lighter;
+
+  .level-item {
+    margin: 1rem;
+  }
 }
 
 section.section-with-sidebar {
