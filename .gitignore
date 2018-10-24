@@ -2,8 +2,5 @@
 node_modules/
 .cache/
 
-##will unignore when ready to publish
-dist/
-
 *.code-workspace
 _javascript/bulma-calendar.min.js
