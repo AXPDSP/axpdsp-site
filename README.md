@@ -23,4 +23,4 @@ We use our `gh-pages` branch for our site deployment. So, follow these steps:
 3. Your changes should be deployed
 
 ## Hosting
-We are using [Github Pages](https://pages.github.com/) to host our site. We are serving the `gh-pages`. See the [Pages Help](https://help.github.com/categories/github-pages-basics/) if you have questions or problems for more on this.
+We are using [Github Pages](https://pages.github.com/) to host our [site](https://perezjo94.github.io/axpdsp-site/). We are serving the `gh-pages`. See the [Pages Help](https://help.github.com/categories/github-pages-basics/) if you have questions or problems for more on this.
