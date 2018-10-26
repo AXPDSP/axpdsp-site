@@ -27,6 +27,8 @@ $garnet-invert: $grey-lighter;
 $primary: $garnet;
 $primary-invert: $garnet-invert;
 
+$carousel-title-background: rgba($black, 0.7);
+
 
 .navbar-logo {
   display: block;
@@ -123,7 +125,7 @@ section.section-with-sidebar {
 }
 
 .carousel-navigation {
-  margin-top: 3rem;
+  margin-top: 1rem;
 
   .carousel-nav-slide-icons{
     padding: 1em;
