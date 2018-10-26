@@ -94,10 +94,16 @@ section.section-with-sidebar {
 
   .columns {
     margin-top: 1rem;
+  }
+}
 
-    .card.officer-headshot {
-      margin: 0 1rem;
-    }
+.card.officer-headshot {
+  margin: 0 1rem;
+  max-width: 207px;
+
+  .card-image {
+    max-width: 207px;
+    max-height: 256px;
   }
 }
 
@@ -154,5 +160,9 @@ section.section-with-sidebar {
       border-radius: .25em;
     }
   }
+}
+
+.card-content {
+  padding: 1rem;
 }
 
