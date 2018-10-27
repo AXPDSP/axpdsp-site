@@ -2,5 +2,7 @@
 node_modules/
 .cache/
 
+dist/
+
 *.code-workspace
 _javascript/bulma-calendar.min.js
