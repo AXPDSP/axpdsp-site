@@ -109,6 +109,10 @@ section.section-with-sidebar {
   }
 }
 
+.hero-instructions {
+  margin-top: 3rem;
+}
+
 // 4. Import the rest of Bulma
 
 
@@ -164,7 +168,22 @@ section.section-with-sidebar {
   }
 }
 
+@media (max-width: $tablet) {
+  #recruitment-upcoming-events-list {
+    margin-left: 0;
+  }
+
+  .section .section-with-sidebar {
+      padding-right: 0;
+  }
+
+}
+
 .card-content {
   padding: 1rem;
+}
+
+.charity-org-item {
+  margin: 1rem;
 }
 

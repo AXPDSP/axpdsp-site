@@ -5,6 +5,13 @@ import _ from '../node_modules/lodash';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  var burger = document.querySelector('.burger');
+    var menu = document.querySelector('#'+burger.dataset.target);
+    burger.addEventListener('click', function() {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+    });
+
 
   // Add smooth scrolling to all links
   $("a.anchor-link").on('click', function(event) {

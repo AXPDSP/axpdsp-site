@@ -14,18 +14,15 @@
       <nav class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <div class="navbar-logo">
-              <a class="navbar-item has-text-centered" href="#">
-                <p class="brand-title">
-                  Alpha Chi Rho
-                </p>
-                <hr>
-                <p class="brand-subtitle">
-                  Delta Sigma Phi
-                </p>
-              </a>
-            </div>
-          </div>
+            <a class="navbar-item" href="#">
+                <img src="assets/logo.png" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
           <div id="navbarMenu" class="navbar-menu">
               <div class="navbar-end">
                 <div class="tabs is-right">
@@ -60,6 +57,7 @@
     </div>
     <div class="hero-body">
       <div class="container has-text-centered">
+        <!-- Desktop or Bigger -->
         <div class='is-hidden-touch carousel carousel-animated carousel-animate-slide' data-autoplay="true" data-delay="7000">
           <div class='carousel-container'>
             <div class='carousel-item is-active' data-slide-index="0">
@@ -123,9 +121,26 @@
             </div>
           </div>
         </div>
+        <!-- Mobile only Container -->
+        <div class="is-hidden-desktop">
+            <h1 class="title">Alpha Chi Rho</h1>
+            <h2 class="subtitle">Delta Sigma Phi</h2>
+          <figure class="image">
+            <img src="assets/group/initiation.jpg">
+          </figure>
+          
+          <p class="hero-instructions">Scroll down to learn more.</p>
+          <p class="has-text-link">
+            <a class="anchor-link" href="#brotherhood-content">
+              <span class="icon is-large">
+                <i class="fas fa-arrow-down fa-2x"></i>
+              </span>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="hero-footer">
+    <div class="hero-footer is-hidden-touch">
       <div class="level-items">
           <a href="#brotherhood-content" class="anchor-link level-item has-text-centered has-text-warning">
               <span class="icon">
@@ -187,7 +202,7 @@
   <section id="recruitment-content" class="section is-medium">
     <div class="container">
         <div class="columns is-vcentered">
-            <div class="column is-one-third is-hidden-mobile">
+            <div class="column is-one-third is-hidden-touch">
             <input type="date"/>
             </div>
             <div class="column is-offset-1">
@@ -236,7 +251,7 @@
             </div>
         </div>
     </div>
-    <nav class="level philanthropy-items">
+    <nav class="level philanthropy-items is-hidden-touch">
         <a href="http://www.feedthechildren.org/" class="level-item button is-info">
             FEED THE CHILDREN
         </a>
@@ -277,7 +292,36 @@
             <img src="https://via.placeholder.com/128x128" alt="Description">
           </figure>
         </a> -->
-      </nav>
+    </nav>
+    <div class="is-hidden-desktop columns">
+      <div class="column has-text-centered">
+        <p class="charity-org-item">
+          <a class="button is-link" href="http://www.feedthechildren.org/">
+              FEED THE CHILDREN
+          </a>
+        </p>
+        <p class="charity-org-item">
+          <a class="button is-link" href="http://www.autism-society.org/">
+            AUTISM SOCIETY OF AMERICA
+          </a>
+        </p>
+        <p class="charity-org-item">
+          <a class="button is-link" href="http://childrenswish.org/">
+            CHILDREN'S WISH FOUNDATION
+          </a>
+        </p>
+       <p class="charity-org-item">
+          <a class="button is-link" href="https://www.cancer.org/">
+            AMERICAN CANCER SOCIETY
+        </a>
+       </p>
+       <p class="charity-org-item">
+          <a class="button is-link" href="https://www.habitat.org/">
+            HABITAT FOR HUMANITY
+          </a>
+       </p>
+      </div>
+    </div>
   </section>
   <!-- UNDERGRAD OFFICERS SECTION START -->
   <section id="membership-content" class="section section-with-sidebar">
@@ -461,7 +505,7 @@
           <div class="column is-3">
               <h2><strong>Graduate Chapter</strong></h2>
               <ul>
-                  <li><a href="http://www.axpdspgrads.com/">www.axpdspgrads.com</a></li>
+                  <li><a href="http://www.axpdspgrads.com/">axpdspgrads.com</a></li>
                   <!-- <li><a href="#">Link 2</a></li>
                   <li><a href="#">Link 3</a></li> -->
               </ul>
