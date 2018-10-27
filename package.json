@@ -7,6 +7,7 @@
     "bulma": "^0.7.1",
     "bulma-calendar": "^5.0.1",
     "bulma-carousel": "^3.0.0",
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
     "parcel-bundler": "^1.10.3"
