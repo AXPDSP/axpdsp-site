@@ -61,44 +61,42 @@
         <!-- Desktop or Bigger -->
         <div class='is-hidden-touch carousel carousel-animated carousel-animate-slide' data-autoplay="true" data-delay="7000">
           <div class='carousel-container'>
-            <div class='carousel-item is-active' data-slide-index="0">
+              <div class='carousel-item' data-slide-index="0">
+                  <div class="columns is-vcentered">
+                    <div class="column">
+                      <figure class="image is-4by3">
+                        <img src="assets/group/initiation.jpeg" alt="Description">
+                      </figure>
+                      <h1 class="title">Initiation 2018.</h1>
+                    </div>
+                  </div> 
+                </div>
+            <div class='carousel-item is-active' data-slide-index="1">
               <div class="columns is-vcentered">
                 <div class="column">
                   <figure class="image is-4by3">
-                    <img src="assets/group/greekweek.jpg" alt="Description">
+                    <img src="assets/group/greekweek.jpeg" alt="Description">
                   </figure>
                   <h1 class="title">Greek Week 2018.</h1>
                 </div>
               </div> 
             </div>
-            <div class='carousel-item' data-slide-index="1">
-              <div class="columns is-vcentered">
-                <div class="column">
-                  <figure class="image is-4by3">
-                    <img src="assets/candids/fun.jpg" alt="Description">
-                  </figure>
-                  <h1 class="title">Recruitment.</h1>
-                </div>
-              </div> 
-            </div>
             <div class='carousel-item' data-slide-index="2">
-              <div class="columns is-vcentered">
-                <div class="column">
-                  <figure class="image is-4by3">
-                      <!-- TODO get image from alex -->
-                    <img src="assets/candids/fun.jpg" alt="Description">
-                  </figure>
-                  <h1 class="title">Brotherhood.</h1>
-                </div>
-              </div> 
-            </div>
+                <div class="columns is-vcentered">
+                  <div class="column">
+                    <figure class="image is-4by3">
+                      <img src="assets/candids/resume_workshop.jpeg" alt="Description">
+                    </figure>
+                    <h1 class="title">Résumé Workshop 2018.</h1>
+                  </div>
+                </div> 
+              </div>
             <div class='carousel-item' data-slide-index="3">
               <div class="columns is-vcentered">
                 <div class="column">
                   <figure class="image is-4by3">
-                    <img src="assets/group/initiation.jpg" alt="Description">
+                    <img src="assets/candids/fun.jpeg" alt="Description">
                   </figure>
-                  <h1 class="title">Initiation 2018.</h1>
                 </div>
               </div> 
             </div>
@@ -127,7 +125,7 @@
             <h1 class="title">Alpha Chi Rho</h1>
             <h2 class="subtitle">Delta Sigma Phi</h2>
           <figure class="image">
-            <img src="assets/group/initiation.jpg">
+            <img src="assets/group/initiation.jpeg">
           </figure>
           
           <p class="hero-instructions">Scroll down to learn more.</p>
@@ -193,6 +191,7 @@
               </div>
               <div class="column is-offset-1 is-5">
                     <figure class="image is-4by3">
+                      <!-- TODO -- add picture for Brotherhood Section -->
                             <img src="https://picsum.photos/800/600/?random" alt="Description">
                     </figure>
               </div>
@@ -203,9 +202,28 @@
   <section id="recruitment-content" class="section is-medium">
     <div class="container">
         <div class="columns is-vcentered">
-            <div class="column is-one-third is-hidden-touch is-hidden-desktop-only">
+            <!-- <div class="column is-one-third is-hidden-touch is-hidden-desktop-only">
             <input type="date"/>
+            </div> -->
+
+            <div class="column is-one-half">
+              <div class="content">
+                <a href="assets/rushcalendar2018.png">
+                  <figure class="image is-4by3">
+                      <img src="assets/rushcalendar2018.png">
+                    </figure>
+                </a>
+              </div>
+              <p class="subtitle has-text-centered">
+                <span>Rush Calendar 2018</span>
+                <a href="assets/rushcalendar2018.png" download style="vertical-align: baseline" class="button">
+                  <span class="icon">
+                    <i class="fas fa-download"></i>
+                  </span>
+                </a>
+              </p>
             </div>
+
             <div class="column is-offset-1">
                 <div class="content">
                     <h1>Recruitment</h1>
@@ -214,16 +232,6 @@
                       We believe in positively impacting the community while ensuring our members experience personal, 
                       academic and professional growth. We can’t wait to meet all of our potential members.
                     </p>
-
-                    <!-- <p class="has-text-centered">
-                      <a class="button is-info">Download AXP Rush Calendar 
-                        <br />
-                        <span class="icon">
-                          <i class="fas fa-download"></i>
-                        </span>
-                      </a>
-                    </p> -->
-                      
                     <h2>Upcoming Events</h2>
                     <ul id="recruitment-upcoming-events-list">
                     </ul>
@@ -236,7 +244,7 @@
   <section id="philanthropy-content" class="section is-small has-background-light">
     <div class="container">
         <div class="columns">
-            <div class="column is-6">
+            <div class="column is-5">
                 <div class="content">
                     <h1>Philanthropy - Making a Difference</h1>
                     <p>The members of Alpha Chi Rho-Delta Sigma Phi Chapter hold philanthropy 
@@ -245,10 +253,11 @@
                       the lives of many. The following are the primary organizations that we work with.</p>
                 </div>
             </div>
-            <div class="column is-offset-1 is-5">
+            <div class="column is-offset-1">
                   <figure class="image is-4by3">
-                          <img src="https://picsum.photos/800/600/?random" alt="Description">
+                          <img src="assets/group/arthritis_walk.jpeg" alt="Description">
                   </figure>
+                  <p class="has-text-centered help">Arithitis Foundation's Walk For a Cure, Worcester, MA</p>
             </div>
         </div>
     </div>
@@ -523,7 +532,9 @@
       <hr style="margin-top: 2rem;" />
       <nav class="level">
         <div class="level-item">
-            <img src="made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          <a href="https://bulma.io">
+              <img src="made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          </a>
         </div>
       </nav>
     </div>

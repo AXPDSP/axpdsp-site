@@ -4,5 +4,7 @@ node_modules/
 
 dist/
 
+**/**/.DS_Store
+
 *.code-workspace
 _javascript/bulma-calendar.min.js
