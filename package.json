@@ -22,9 +22,9 @@
   "scripts": {
     "prebuild": "rimraf dist/",
     "build": "parcel build index.html",
-    "postbuild": "cp ./CNAME dist/",
     "postinstall": "cp node_modules/bulma-calendar/dist/js/bulma-calendar.min.js ./_javascript/bulma-calendar.min.js",
     "start": "parcel index.html",
+    "pregh:deploy": "cp ./CNAME dist/",
     "gh:deploy": "gh-pages -d dist"
   },
   "keywords": [],
