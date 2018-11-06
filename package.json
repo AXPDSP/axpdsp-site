@@ -17,7 +17,8 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "node-sass": "^4.9.3",
-    "postcss-cli": "^6.0.0"
+    "postcss-cli": "^6.0.0",
+    "sass": "^1.14.3"
   },
   "scripts": {
     "prebuild": "rimraf dist/",
