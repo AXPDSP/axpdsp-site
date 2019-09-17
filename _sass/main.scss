@@ -8,7 +8,7 @@
 
 // 1. Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
-@import url('https://fonts.googleapis.com/css?family=Asap|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Asap|Raleway|Righteous|Roboto+Condensed');
 
 // 2. Set your own initial variables
 // Update the blue shade, used for links
@@ -120,8 +120,78 @@ section.section-with-sidebar {
 @import "../node_modules/bulma-carousel/dist/css/bulma-carousel";
 @import "../node_modules/bulma-calendar/dist/css/bulma-calendar";
 
+.navbar {
+  .navbar-end {
+    .buttons {
+      display: block;
+
+      .button {
+        height: auto;
+
+        &.is-light.is-inverted {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+
 .hero-body {
   padding-bottom: 1rem;
+
+  .title {
+    font-size: 4rem;
+    font-family: 'Righteous', sans-serif;
+  }
+
+  .subtitle {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+
+    &.subtitle-caption {
+      font-size: 1.5rem;
+      margin-top: -1rem;
+    }
+  }
+
+  .content {
+    margin-top: 4rem;
+
+    .buttons {
+      display: flex; 
+      justify-content: center;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+.hero-footer {
+  padding-bottom: 1rem;
+
+  a.scroll-down-for-more {
+    color: $white;
+
+    span.scroll-button { 
+      margin-bottom: .5em;
+    }
+
+    &:hover {
+      color: $grey-lighter;
+    }
+  }
+}
+
+.hero.is-fullheight.with-background-image {
+
+  @media (min-width: $tablet) {
+    background: linear-gradient( rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.6) ), url(../assets/group/initiation2019.JPG) no-repeat center center fixed;
+    background-size: cover;
+  }
+  // min-height: 100vh;
 }
 
 .calendar {
@@ -191,3 +261,20 @@ section.section-with-sidebar {
   margin: 1rem;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 999;
+  opacity: 0;
+
+  transition: opacity .5s;
+
+  &.show {
+    opacity: 1;
+  }
+
+  span {
+    font-family: 'Roboto Condensed', sans-serif;
+  } 
+}

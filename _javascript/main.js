@@ -37,6 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
     } // End if
   });
 
+  var scrollToTop = $('.scroll-to-top');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 200) {
+      scrollToTop.addClass('show');
+    } else {
+      scrollToTop.removeClass('show');
+    }
+  });
+
   var carousels = bulmaCarousel.attach();
   // console.log(carousels.length);
 

@@ -4,7 +4,7 @@
   "description": "AXPDSP website",
   "main": "index.html",
   "dependencies": {
-    "bulma": "^0.7.1",
+    "bulma": "^0.7.5",
     "bulma-calendar": "^5.0.1",
     "bulma-carousel": "^3.0.0",
     "gh-pages": "^2.0.1",
