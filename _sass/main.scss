@@ -120,21 +120,27 @@ section.section-with-sidebar {
 @import "../node_modules/bulma-carousel/dist/css/bulma-carousel";
 @import "../node_modules/bulma-calendar/dist/css/bulma-calendar";
 
-.navbar {
-  .navbar-end {
-    .buttons {
-      display: block;
 
-      .button {
-        height: auto;
+@media (max-width: $tablet) {
 
-        &.is-light.is-inverted {
-          background: none;
+  .navbar {
+    .navbar-end {
+      .buttons {
+        display: block;
+  
+        .button {
+          height: auto;
+  
+          &.is-light.is-inverted {
+            background: none;
+          }
         }
       }
     }
   }
+
 }
+
 
 
 .hero-body {
