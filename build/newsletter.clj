@@ -1,1 +1,0 @@
-[{:html "<h1>NEWS</h1>", :title "Title", :author "Reily Siegel", :position "Newsletter Editor", :date #inst "2020-04-02T00:00:00.000-00:00"} {:html "<h1>NEWS</h1>", :title "Title", :author "Reily Siegel", :position "Newsletter Editor", :date #inst "2020-04-03T00:00:00.000-00:00"}]
