@@ -1,0 +1,9 @@
+{:source-paths ["src" "resources"]
+ :dependencies [[thheller/shadow-cljs      "2.8.83"]
+                [reagent                   "0.10.0"]
+                [re-frame                  "RELEASE"]]
+ :dev-http     {8080 "resources/public"}
+ :builds       {:app {:target     :browser
+                      :output-dir "resources/public/js"
+                      :asset-path "/js"
+                      :modules    {:main {:init-fn axpdsp-site.core/init!}}}}}
