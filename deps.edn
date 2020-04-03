@@ -1,0 +1,3 @@
+{:deps    {markdown-clj {:mvn/version "1.10.2"}}
+ :aliases {:build-newsletter
+           {:main-opts ["-m" "axpdsp-site.build.newsletter"]}}}
