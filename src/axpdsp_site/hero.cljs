@@ -1,5 +1,7 @@
 (ns axpdsp-site.hero
-  [:require [axpdsp-site.resources :as rs]])
+  (:require [axpdsp-site.resources :as rs]
+            ["@fortawesome/react-fontawesome" :refer [FontAwesomeIcon]]
+            ["@fortawesome/free-solid-svg-icons/faLongArrowAltDown" :as faLongArrowAltDown]))
 
 (defn ui []
   [:section.hero.is-primary.is-fullheight.with-background-image
@@ -35,4 +37,4 @@
       "scroll down"]
      [:p
       [:span.icon
-       [:i.fas.fa-lg.fa-long-arrow-alt-down]]]]]])
+       [:> FontAwesomeIcon {:icon faLongArrowAltDown}]]]]]])

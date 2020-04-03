@@ -21,7 +21,7 @@ jobs:
           useLockFile: false
       - name: Build SASS
         run: |
-          npx sass _sass/main.scss resources/public/css/main.css
+          npx sass _sass/main.scss resources/public/css/main.css --style compressed
       - name: Build ClojureScript
         run: |
           npx shadow-cljs release app
