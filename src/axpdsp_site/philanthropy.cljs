@@ -1,7 +1,7 @@
 (ns axpdsp-site.philanthropy)
 
 (defn ui []
-  [:section.section.is-small.has-background-light {:id "philanthropy"}
+  [:section.section.is-small {:id "philanthropy"}
    [:div.container
     [:div.columns
      [:div.column.is-6

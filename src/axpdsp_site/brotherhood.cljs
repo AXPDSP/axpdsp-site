@@ -1,7 +1,7 @@
 (ns axpdsp-site.brotherhood)
 
 (defn ui []
-  [:section.section.is-small.has-background-light {:id "brotherhood"}
+  [:section.section.is-small {:id "brotherhood"}
    [:div.container
     [:div.columns
      [:div.column.is-6
