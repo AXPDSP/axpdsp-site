@@ -15,7 +15,7 @@
 
 (defn -main [& _]
   (println "Building newsletter...")
-  (spit (io/file "build/newsletter.edn")
+  (spit (io/file "resources/newsletter.edn")
         (->> (files "newsletter")
              (map parse-markdown)
              (sort-by :date (comp - compare))

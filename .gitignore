@@ -1,4 +1,4 @@
 /.cpcache/
 /.nrepl-port
-/build/*
-!/build/.gitignore
+/resourcesy/*
+!/resources/public
