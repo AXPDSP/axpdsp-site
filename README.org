@@ -1,0 +1,24 @@
+* Contributing
+** Writing a Newsletter Entry
+The newsletter builder expects news entries to be organized in any directory
+structure in the ~./newsletter~ directory. The newsletters MUST be Markdown files,
+and SHOULD contain the headers title, author, position, and date. The date
+should be formatted as a string in the ~"yyyy-mm-dd"~ format.
+
+Here is an example newsletter entry:
+#+begin_src markdown
+---
+title: The New AXPDSP Website is Complete
+author: Reily Siegel
+position: Newsletter Editor
+date: 2023-06-01
+---
+
+Our Website has been completed!
+
+## A Subsection
+We are now inside a subsection.
+#+end_src
+
+The newsletter builder can be called with the command ~clj
+-A:newsletter-builder~, but it shouldn't need to be done manually.
