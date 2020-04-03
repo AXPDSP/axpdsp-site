@@ -19,7 +19,7 @@ jobs:
         uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
-      - name: Build ClojureScript
+      - name: Build SASS
         run: |
           npx sass _sass/main.scss resources/public/css/main.css
       - name: Build ClojureScript
