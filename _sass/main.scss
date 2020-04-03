@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+// $blue: #06bcef;
+// // Add pink and its invert
+// $pink: #ff8080;
+// $pink-invert: #fff;
+// // Update the sans-serif font family
+// $family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+$garnet: hsl(335, 55, 34);
+$garnet-invert: $grey-lighter;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $garnet;
+$primary-invert: $garnet-invert;
+
+$carousel-title-background: rgba($black, 0.7);
+
+
+.navbar-logo {
+    display: block;
+
+    .navbar-item {
+        display: block;
+
+        .brand-title {
+            font-family: 'Raleway', 'Arial';
+            font-size: 2rem;
+        }
+
+        .brand-subtitle {
+            font-family: 'Asap', 'Arial';
+            font-size: 1rem;
+            // align: center;
+        }
+
+        hr {
+            margin: 0px;
+        }
+    }
+}
+
+.section-media-image {
+    width: 100px;
+    height: 100px;
+}
+
+.philanthropy-items {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 2px solid $grey-lighter;
+    border-bottom: 2px solid $grey-lighter;
+
+    .level-item {
+        margin: 1rem;
+    }
+}
+
+section.section-with-sidebar {
+    padding-left: 0rem;
+    padding-right: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+
+    .section-sidebar {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        border-radius: 0px;
+
+        .title {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+}
+
+.sidebar-title {
+    margin-top: 5rem;
+}
+
+.column.officer-headshots {
+    margin: 3rem;
+
+    .columns {
+        margin-top: 1rem;
+    }
+}
+
+.card.officer-headshot {
+    margin: 0 1rem;
+    max-width: 207px;
+
+    .card-image {
+        max-width: 207px;
+        max-height: 256px;
+    }
+}
+
+.hero-instructions {
+    margin-top: 3rem;
+}
+
+// 4. Import the rest of Bulma
+
+
+@import "../node_modules/bulma/bulma";
+//@import "../node_modules/bulma-carousel/dist/css/bulma-carousel.min.css";
+//@import "../node_modules/bulma-calendar/dist/css/bulma-calendar.min.css";
+
+
+@media (max-width: $tablet) {
+
+    .navbar {
+        .navbar-end {
+            .buttons {
+                display: block;
+                
+                .button {
+                    height: auto;
+                    
+                    &.is-light.is-inverted {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.hero-body {
+    padding-bottom: 1rem;
+
+    .title {
+        font-size: 4rem;
+        font-family: 'Righteous', sans-serif;
+    }
+
+    .subtitle {
+        font-size: 3rem;
+        font-family: 'Raleway', sans-serif;
+
+        &.subtitle-caption {
+            font-size: 1.5rem;
+            margin-top: -1rem;
+        }
+    }
+
+    .content {
+        margin-top: 4rem;
+
+        .buttons {
+            display: flex; 
+            justify-content: center;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+.hero-footer {
+    padding-bottom: 1rem;
+
+    a.scroll-down-for-more {
+        color: $white;
+
+        span.scroll-button { 
+            margin-bottom: .5em;
+        }
+
+        &:hover {
+            color: $grey-lighter;
+        }
+    }
+}
+
+.hero.is-fullheight.with-background-image {
+
+    @media (min-width: $tablet) {
+        background: linear-gradient( rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.6) ), url(../assets/group/initiation2019.JPG) no-repeat center center fixed;
+        background-size: cover;
+    }
+    // min-height: 100vh;
+}
+
+.calendar {
+    max-width: none;
+}
+
+.calendar-footer-today {
+    color: $info !important;
+}
+
+.carousel-navigation {
+    margin-top: 1rem;
+
+    .carousel-nav-slide-icons{
+        padding: 1em;
+    }
+
+    .carousel-nav-left, .carousel-nav-right {
+        cursor: pointer;
+    }
+}
+
+.content {
+    blockquote {
+        &.is-crow-quote {
+            color: $garnet-invert;
+            background: rgba($garnet, 0.8);
+            border-left: 5px solid $garnet;
+        }
+    }
+}
+
+#recruitment-upcoming-events-list {
+    .upcoming-event-list-item {
+        padding: 1em;
+        background: $white-ter;
+        list-style: none;
+
+        &.upcoming-event-list-item-selected {
+            background: $cyan;
+            color: $white;
+        }
+        &:hover {
+            background: $turquoise;
+            color: $white;
+            border-radius: .25em;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    #recruitment-upcoming-events-list {
+        margin-left: 0;
+    }
+
+    #membership-content.section.section-with-sidebar {
+        padding-right: 0;
+    }
+
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.charity-org-item {
+    margin: 1rem;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 999;
+    opacity: 0;
+
+    transition: opacity .5s;
+
+    &.show {
+        opacity: 1;
+    }
+
+    span {
+        font-family: 'Roboto Condensed', sans-serif;
+    } 
+}
