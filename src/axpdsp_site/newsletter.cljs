@@ -1,6 +1,10 @@
 (ns axpdsp-site.newsletter
-  (:require [axpdsp-site.resources :as resources]
-            [reagent.core :as r]))
+  (:require [reagent.core :as r]
+            [cljs.reader :as reader]
+            [shadow.resource :as resource]))
+
+(def newsletter (reader/read-string (resource/inline "newsletter.edn")))
+
 
 (defn ui []
   (let [entry-index (r/atom 0)]
@@ -13,7 +17,7 @@
            [:h1 "Newsletter - Fresh off the Press"]]
           [:div.columns
            (for [[{:keys [title author position date]}
-                  idx] (map vector (take 6 resources/newsletter) (range))]
+                  idx] (map vector (take 6 newsletter) (range))]
              [:div.column.is-6
               {:key idx}
               [:div.card
@@ -38,4 +42,4 @@
                  "View"]]]])]]
          [:div.column.is-offset-1.is-5
           [:div.content {:dangerouslySetInnerHTML
-                         {:__html (:html (nth resources/newsletter @entry-index))}}]]]]])))
+                         {:__html (:html (nth newsletter @entry-index))}}]]]]])))

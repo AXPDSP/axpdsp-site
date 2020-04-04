@@ -14,6 +14,7 @@
        the primary organizations that we work with."]]]
      [:div.column.is-offset-1.is-5
       [:figure.image.is-4by3
-       [:img {:alt "Alpha Chi Rho Brothers at Arthritis Foundation's Walk for a Cure in Worcester, MA" }]]
+       [:img {:src "images/group/arthritis_walk.jpeg"
+              :alt "Alpha Chi Rho Brothers at Arthritis Foundation's Walk for a Cure in Worcester, MA" }]]
       [:div.has-text-centered.help
        "Arthritis Foundation's Walk for a Cure, Worcester, MA"]]]]])

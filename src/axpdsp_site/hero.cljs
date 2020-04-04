@@ -1,7 +1,4 @@
-(ns axpdsp-site.hero
-  (:require [axpdsp-site.resources :as rs]
-            ["@fortawesome/react-fontawesome" :refer [FontAwesomeIcon]]
-            ["@fortawesome/free-solid-svg-icons/faLongArrowAltDown" :as faLongArrowAltDown]))
+(ns axpdsp-site.hero)
 
 (defn ui []
   [:section.hero.is-primary.is-fullheight.with-background-image
@@ -18,13 +15,12 @@
        [:a.button.is-link.is-inverted.is-outlined.anchor-link
         {:href "#brotherhood"}
         "Brotherhood"]
-       (if rs/rushing?
-         [:a.button.is-link.is-inverted.is-outlined.anchor-link
-          {:href "#recruitment"}
-          "Recruitment"]
-         [:a.button.is-link.is-inverted.is-outlined.anchor-link
-          {:href "#newsletter"}
-          "Newsletter"])
+       [:a.button.is-link.is-inverted.is-outlined.anchor-link
+        {:href "#recruitment"}
+        "Recruitment"]
+       [:a.button.is-link.is-inverted.is-outlined.anchor-link
+        {:href "#newsletter"}
+        "Newsletter"]
        [:a.button.is-link.is-inverted.is-outlined.anchor-link
         {:href "#philanthropy"}
         "Philanthropy"]
@@ -36,5 +32,5 @@
      [:p.button.is-small.is-dark.scroll-button
       "scroll down"]
      [:p
-      [:span.icon
-       [:> FontAwesomeIcon {:icon faLongArrowAltDown}]]]]]])
+      [:span.icon {:style {:font-size "1.5rem"}}
+       "⌄"]]]]])

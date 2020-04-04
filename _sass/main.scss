@@ -195,8 +195,8 @@ section.section-with-sidebar {
 
     @media (min-width: $tablet) {
         background: linear-gradient( rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.6) ),
-                    //url(../assets/group/initiation2019.JPG)
-                    no-repeat center center fixed;
+                    url(../images/group/initiation.jpeg)
+                       no-repeat center center fixed;
         background-size: cover;
     }
     // min-height: 100vh;
