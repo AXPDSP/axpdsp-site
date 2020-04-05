@@ -3,19 +3,21 @@
             [axpdsp-site.resources :as rs]
             [axpdsp-site.hero :as hero]
             [axpdsp-site.brotherhood :as brotherhood]
+            [axpdsp-site.footer :as footer]
             [axpdsp-site.newsletter :as newsletter]
             [axpdsp-site.officers :as officers]
             [axpdsp-site.philanthropy :as philanthropy]
             [axpdsp-site.recruitment :as recruitment]))
 
 (defn ui []
-  [:div
+  [:<>
    [hero/ui]
    [brotherhood/ui]
    [recruitment/ui]
    [newsletter/ui]
    [philanthropy/ui]
-   [officers/ui]])
+   [officers/ui]
+   [footer/ui]])
 
 (defn render
   []

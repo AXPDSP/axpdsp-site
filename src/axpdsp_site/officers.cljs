@@ -35,7 +35,7 @@
       {:style {:margin-bottom "5rem"}}
       [:p.level-item.title "Executive Officers"]]]
     [:div.column
-     {:style {:margin "4rem"}}
+     {:style {:padding "4rem"}}
      [:div.columns.is-multiline.is-8.is-variable
       (for [officer officers-order]
         [:div.column.is-one-third {:key officer}
