@@ -15,6 +15,23 @@
      [:div.column.is-offset-1.is-5
       [:figure.image.is-4by3
        [:img {:src "images/group/arthritis_walk.jpeg"
-              :alt "Alpha Chi Rho Brothers at Arthritis Foundation's Walk for a Cure in Worcester, MA" }]]
+              :alt "Alpha Chi Rho Brothers at Arthritis Foundation's Walk for a
+              Cure in Worcester, MA" }]]
       [:div.has-text-centered.help
-       "Arthritis Foundation's Walk for a Cure, Worcester, MA"]]]]])
+       "Arthritis Foundation's Walk for a Cure, Worcester, MA"]]]]
+   [:nav.level.philanthropy-items
+    [:a.button.is-primary.level-item
+     {:href "https://www.feedthechildren.org/"}
+     "FEED THE CHILDREN"]
+    [:a.button.is-primary.level-item
+     {:href "https://www.autism-society.org/"}
+     "AUTISM SOCIETY OF AMERICA"]
+    [:a.button.is-primary.level-item
+     {:href "https://childrenswish.org/"}
+     "CHILDREN'S WISH FOUNDATION"]
+    [:a.button.is-primary.level-item
+     {:href "https://www.cancer.org/"}
+     "AMERICAN CANCER SOCIETY"]
+    [:a.button.is-primary.level-item
+     {:href "https://www.habitat.org/"}
+     "HABITAT FOR HUMANITY"]]])
