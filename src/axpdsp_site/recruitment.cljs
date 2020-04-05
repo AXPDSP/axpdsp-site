@@ -6,8 +6,9 @@
     [:div.columns
      [:div.column.is-5
       [:figure.image.is-4by3
-       [:img {:src "images/rushcalendar2019.png"
-              :alt "A calendar detailing our rush events for 2019." }]]
+       [:img {:src     "images/rushcalendar2019.png"
+              :loading :lazy
+              :alt     "A calendar detailing our rush events for 2019." }]]
       [:div.has-text-centered.help
        "Rush Calendar 2019"]]
      [:div.column.is-6

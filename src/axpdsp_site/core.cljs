@@ -4,6 +4,7 @@
             [axpdsp-site.hero :as hero]
             [axpdsp-site.brotherhood :as brotherhood]
             [axpdsp-site.newsletter :as newsletter]
+            [axpdsp-site.officers :as officers]
             [axpdsp-site.philanthropy :as philanthropy]
             [axpdsp-site.recruitment :as recruitment]))
 
@@ -13,7 +14,8 @@
    [brotherhood/ui]
    [recruitment/ui]
    [newsletter/ui]
-   [philanthropy/ui]])
+   [philanthropy/ui]
+   [officers/ui]])
 
 (defn render
   []

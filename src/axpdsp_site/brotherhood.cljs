@@ -31,7 +31,8 @@
         " - \"Be Men\" - (Pronounced: An-DREE-zes-theh) "]]]
      [:div.column.is-offset-1.is-5
       [:figure.image.is-3by4
-       [:img {:src "images/house.jpeg"
-              :alt "Our House at 8 Boynton St."}]]
+       [:img {:src     "images/house.jpeg"
+              :loading :lazy
+              :alt     "Our House at 8 Boynton St."}]]
       [:div.has-text-centered.help
        "Our House at 8 Boynton"]]]]])
