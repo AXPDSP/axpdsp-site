@@ -14,31 +14,31 @@
       [:p "Learn more about us here:"]
       [:div.buttons.is-centered
        [:> Link {:to     "brotherhood"
-                 :smooth true}
-        [:a.button.is-link.is-inverted.is-outlined.anchor-link
-         "Brotherhood"]]
+                 :smooth true
+                 :class  "button is-link is-inverted is-outlined anchor-link"}
+        "Brotherhood"]
        [:> Link {:to     "recruitment"
-                 :smooth true}
-        [:a.button.is-link.is-inverted.is-outlined.anchor-link
-         "Recruitment"]]
+                 :smooth true
+                 :class  "button is-link is-inverted is-outlined anchor-link"}
+        "Recruitment"]
        [:> Link {:to     "newsletter"
-                 :smooth true}
-        [:a.button.is-link.is-inverted.is-outlined.anchor-link
-         "Newsletter"]]
+                 :smooth true
+                 :class  "button is-link is-inverted is-outlined anchor-link"}
+        "Newsletter"]
        [:> Link {:to     "philanthropy"
-                 :smooth true}
-        [:a.button.is-link.is-inverted.is-outlined.anchor-link
-         "Philanthropy"]]
+                 :smooth true
+                 :class  "button is-link is-inverted is-outlined anchor-link"}
+        "Philanthropy"]
        [:> Link {:to     "officers"
-                 :smooth true}
-        [:a.button.is-link.is-inverted.is-outlined.anchor-link
-         "Our Officers"]]]]]]
+                 :smooth true
+                 :class  "button is-link is-inverted is-outlined anchor-link"}
+        "Our Officers"]]]]]
    [:div.hero-footer.has-text-centered
     [:> Link {:to     "brotherhood"
-              :smooth true}
-     [:a.scroll-down-for-more.anchor-link
-      [:p.button.is-small.is-dark.scroll-button
-       "scroll down"]
-      [:p
-       [:span.icon {:style {:font-size "1.5rem"}}
-        "⌄"]]]]]])
+              :smooth true
+              :class  "scroll-down-for-more anchor-link"}
+     [:p.button.is-small.is-dark.scroll-button
+      "scroll down"]
+     [:p
+      [:span.icon {:style {:font-size "1.5rem"}}
+       "⌄"]]]]])
