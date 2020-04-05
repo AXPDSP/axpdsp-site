@@ -1,4 +1,5 @@
-(ns axpdsp-site.hero)
+(ns axpdsp-site.hero
+  (:require ["react-scroll" :refer [Link]]))
 
 (defn ui []
   [:section.hero.is-primary.is-fullheight.with-background-image
@@ -12,25 +13,32 @@
      [:div.content
       [:p "Learn more about us here:"]
       [:div.buttons.is-centered
-       [:a.button.is-link.is-inverted.is-outlined.anchor-link
-        {:href "#brotherhood"}
-        "Brotherhood"]
-       [:a.button.is-link.is-inverted.is-outlined.anchor-link
-        {:href "#recruitment"}
-        "Recruitment"]
-       [:a.button.is-link.is-inverted.is-outlined.anchor-link
-        {:href "#newsletter"}
-        "Newsletter"]
-       [:a.button.is-link.is-inverted.is-outlined.anchor-link
-        {:href "#philanthropy"}
-        "Philanthropy"]
-       [:a.button.is-link.is-inverted.is-outlined.anchor-link
-        {:href "#officers"}
-        "Our Officers"]]]]]
+       [:> Link {:to     "brotherhood"
+                 :smooth true}
+        [:a.button.is-link.is-inverted.is-outlined.anchor-link
+         "Brotherhood"]]
+       [:> Link {:to     "recruitment"
+                 :smooth true}
+        [:a.button.is-link.is-inverted.is-outlined.anchor-link
+         "Recruitment"]]
+       [:> Link {:to     "newsletter"
+                 :smooth true}
+        [:a.button.is-link.is-inverted.is-outlined.anchor-link
+         "Newsletter"]]
+       [:> Link {:to     "philanthropy"
+                 :smooth true}
+        [:a.button.is-link.is-inverted.is-outlined.anchor-link
+         "Philanthropy"]]
+       [:> Link {:to     "officers"
+                 :smooth true}
+        [:a.button.is-link.is-inverted.is-outlined.anchor-link
+         "Our Officers"]]]]]]
    [:div.hero-footer.has-text-centered
-    [:a.scroll-down-for-more.anchor-link {:href "#brotherhood"}
-     [:p.button.is-small.is-dark.scroll-button
-      "scroll down"]
-     [:p
-      [:span.icon {:style {:font-size "1.5rem"}}
-       "⌄"]]]]])
+    [:> Link {:to     "brotherhood"
+              :smooth true}
+     [:a.scroll-down-for-more.anchor-link
+      [:p.button.is-small.is-dark.scroll-button
+       "scroll down"]
+      [:p
+       [:span.icon {:style {:font-size "1.5rem"}}
+        "⌄"]]]]]])

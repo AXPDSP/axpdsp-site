@@ -4,12 +4,14 @@
             [axpdsp-site.hero :as hero]
             [axpdsp-site.brotherhood :as brotherhood]
             [axpdsp-site.newsletter :as newsletter]
-            [axpdsp-site.philanthropy :as philanthropy]))
+            [axpdsp-site.philanthropy :as philanthropy]
+            [axpdsp-site.recruitment :as recruitment]))
 
 (defn ui []
   [:div
    [hero/ui]
    [brotherhood/ui]
+   [recruitment/ui]
    [newsletter/ui]
    [philanthropy/ui]])
 

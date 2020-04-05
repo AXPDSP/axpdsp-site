@@ -1,4 +1,7 @@
 /.cpcache/
 /.nrepl-port
-/resourcesy/*
-!/resources/public
+/node_modules
+/.shadow-cljs
+/resources/newsletter.edn
+/resources/public/js
+/resources/public/css
