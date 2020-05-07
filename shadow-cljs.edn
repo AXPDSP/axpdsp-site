@@ -1,7 +1,5 @@
 {:source-paths ["src" "resources"]
- :dependencies [[thheller/shadow-cljs      "2.8.83"]
-                [reagent                   "0.10.0"]
-                [re-frame                  "RELEASE"]]
+ :deps         {:aliases [:cljs]}
  :dev-http     {8080 "resources/public"}
  :builds       {:app {:target     :browser
                       :output-dir "resources/public/js"

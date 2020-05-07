@@ -1,4 +1,27 @@
-(ns axpdsp-site.brotherhood)
+(ns axpdsp-site.brotherhood
+  (:require [clojure-sheets.core :as sheets]
+            [clojure-sheets.key-fns :as sheets.key-fns]
+            [clojure.core.async :as a]
+            [reagent.core :as r]))
+
+(def brothers (r/atom nil))
+(a/go (let [brothers-res (sheets/sheet->map
+                          "1o7fckgforDgA_YYQkBFjZtVr7Z2U19DJsnwG5MrMEJE"
+                          {:key-fn sheets.key-fns/idiomatic-keyword})]
+        (reset! brothers (shuffle (a/<! brothers-res)))))
+
+(defn cycle-vector
+  "Returns a new vector "
+  [[head & more]]
+  (when head
+    (let [v (vec more)]
+     (conj v head))))
+
+(defonce
+  ^{:doc "A timer to update the brother shown every 5 seconds"}
+  brother-cycle
+  (js/setInterval #(swap! brothers cycle-vector)
+                  5000))
 
 (defn ui []
   [:section.section.is-small.has-background-light {:id "brotherhood"}
@@ -29,10 +52,18 @@
        [:blockquote.is-crow-quote
         [:b "ΑΝΔΡΙΖΕΣΘΕ"]
         " - \"Be Men\" - (Pronounced: An-DREE-zes-theh) "]]]
-     [:div.column.is-offset-1.is-5
-      [:figure.image.is-3by4
-       [:img {:src     "images/house.jpeg"
-              :loading :lazy
-              :alt     "Our House at 8 Boynton St."}]]
-      [:div.has-text-centered.help
-       "Our House at 8 Boynton"]]]]])
+     (let [{:brother/keys [name scroll bio postulancy-year image-url]
+            :as brother}
+           (first @brothers)]
+       (when brother
+         [:div.column.is-offset-1.is-5
+          [:div.card
+           [:div.card-image
+            [:figure.image.is-square
+             [:img {:src   image-url
+                    :alt   (str "Portrait of " name)
+                    :style {:width "100%"}}]]]
+           [:div.card-content
+            [:p.has-text-weight-semibold (str name " - " scroll)]
+            [:p (str "Postulancy Year " postulancy-year)]
+            [:p bio]]]]))]]])
