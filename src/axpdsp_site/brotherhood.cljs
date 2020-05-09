@@ -15,9 +15,10 @@
                   5000))
 
 (defn ui []
-  [:section.section.is-small.has-background-light {:id "brotherhood"}
-   [:div.container
-    [:div.columns
+  [:section.section.is-small.has-background-light.is-flex
+   {:id "brotherhood" :style {:min-height "100vh"}}
+   [:div.container.is-flex.is-vcentered
+    [:div.columns.is-vcentered
      [:div.column.is-6
       [:div.content
        [:h1 "Brotherhood - Our Landmarks"]
