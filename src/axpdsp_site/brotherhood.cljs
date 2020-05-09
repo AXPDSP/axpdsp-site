@@ -9,10 +9,10 @@
       (conj v head))))
 
 (defonce
-  ^{:doc "A timer to update the brother shown every 5 seconds"}
+  ^{:doc "A timer to update the brother shown every 7.5 seconds"}
   brother-cycle
   (js/setInterval #(swap! data/brothers cycle-vector)
-                  5000))
+                  7500))
 
 (defn ui []
   [:section.section.is-small.has-background-light.is-flex
@@ -44,7 +44,8 @@
        [:blockquote.is-crow-quote
         [:b "ΑΝΔΡΙΖΕΣΘΕ"]
         " - \"Be Men\" - (Pronounced: An-DREE-zes-theh) "]]]
-     (let [{:brother/keys [name scroll bio postulancy-year exec-position]
+     (let [{:brother/keys [name scroll bio grad-year exec-position major
+                           activities]
             :as           brother}
            (first @data/brothers)]
        (when brother
@@ -61,8 +62,9 @@
                                          "https://via.placeholder.com/400x500"))}]]]
            [:div.card-content
             [:p.has-text-weight-semibold (str name " - " scroll)]
-            (when exec-position
-              [:p exec-position])
-            (when postulancy-year
-              [:p (str "Postulancy Year " postulancy-year)])
+            [:p exec-position]
+            [:p major]
+            [:p activities]
+            (when grad-year
+              [:p (str "Class of " grad-year)])
             [:p bio]]]]))]]])
