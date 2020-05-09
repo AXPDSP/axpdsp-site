@@ -1,26 +1,17 @@
 (ns axpdsp-site.brotherhood
-  (:require [clojure-sheets.core :as sheets]
-            [clojure-sheets.key-fns :as sheets.key-fns]
-            [clojure.core.async :as a]
-            [reagent.core :as r]))
-
-(def brothers (r/atom nil))
-(a/go (let [brothers-res (sheets/sheet->map
-                          "1o7fckgforDgA_YYQkBFjZtVr7Z2U19DJsnwG5MrMEJE"
-                          {:key-fn sheets.key-fns/idiomatic-keyword})]
-        (reset! brothers (shuffle (a/<! brothers-res)))))
+  (:require [axpdsp-site.data :as data]))
 
 (defn cycle-vector
   "Returns a new vector "
   [[head & more]]
   (when head
     (let [v (vec more)]
-     (conj v head))))
+      (conj v head))))
 
 (defonce
   ^{:doc "A timer to update the brother shown every 5 seconds"}
   brother-cycle
-  (js/setInterval #(swap! brothers cycle-vector)
+  (js/setInterval #(swap! data/brothers cycle-vector)
                   5000))
 
 (defn ui []
@@ -52,18 +43,25 @@
        [:blockquote.is-crow-quote
         [:b "ΑΝΔΡΙΖΕΣΘΕ"]
         " - \"Be Men\" - (Pronounced: An-DREE-zes-theh) "]]]
-     (let [{:brother/keys [name scroll bio postulancy-year image-url]
-            :as brother}
-           (first @brothers)]
+     (let [{:brother/keys [name scroll bio postulancy-year exec-position]
+            :as           brother}
+           (first @data/brothers)]
        (when brother
-         [:div.column.is-offset-1.is-5
+         [:div.column.is-offset-2.is-4
           [:div.card
            [:div.card-image
-            [:figure.image.is-square
-             [:img {:src   image-url
-                    :alt   (str "Portrait of " name)
-                    :style {:width "100%"}}]]]
+            [:figure.image.is-4by5
+             [:img {:src         (str "images/brothers/" scroll ".jpeg")
+                    :alt         (str "Portrait of " name)
+                    :style       {:width "100%"}
+                    #_#_:onError (fn [e]
+                                   (set! (.-onerror (.-target e)) nil)
+                                   (set! (.-src (.-target e))
+                                         "https://via.placeholder.com/400x500"))}]]]
            [:div.card-content
             [:p.has-text-weight-semibold (str name " - " scroll)]
-            [:p (str "Postulancy Year " postulancy-year)]
+            (when exec-position
+              [:p exec-position])
+            (when postulancy-year
+              [:p (str "Postulancy Year " postulancy-year)])
             [:p bio]]]]))]]])
