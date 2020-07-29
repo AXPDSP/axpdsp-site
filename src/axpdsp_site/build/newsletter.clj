@@ -18,7 +18,7 @@
   (spit (io/file "resources/newsletter.edn")
         (->> (files "newsletter")
              (map parse-markdown)
-             (sort-by :date (comp - compare))
+             (sort-by (juxt :important :date) (comp - compare))
              vec
              prn-str))
   (println "Newsletter built."))
