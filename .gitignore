@@ -1,10 +1,7 @@
-.vscode/
-node_modules/
-.cache/
-
-dist/
-
-**/**/.DS_Store
-
-*.code-workspace
-_javascript/bulma-calendar.min.js
+/.cpcache/
+/.nrepl-port
+/node_modules
+/.shadow-cljs
+/resources/newsletter.edn
+/resources/public/js
+/resources/public/css

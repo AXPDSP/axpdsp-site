@@ -1,0 +1,40 @@
+* Contributing
+** Writing a Newsletter Entry
+Newsletters can be written by the Newsletter Editor, Committee Chairs, or by the
+Webmaster. The process submitting a newsletter entry has been as simple as
+possible to accommodate the wide array of people with varying technical knowledge
+who may have an interest in publishing an entry. As such, we assume that the
+person making a contribution to the newsletter will be using the graphical
+interface provided by GitHub to make their change.
+
+First, click [[https://github.com/AXPDSP/axpdsp-site/new/master/newsletter][here]] to create a new file in the newsletter directory. An editor
+should appear, prompting you for a file name. Enter ~DATE.md~, where ~DATE~ is
+the current date in ~yyyy-mm-dd~ format. Once a name for the file has been
+assigned, you can begin writing your article in the editor. Newsletter entries
+are written in [[https://www.markdownguide.org/basic-syntax/][markdown format]]. GitHub has built-in support for rendering
+markdown, so you can check to see what the compiled result will look like in the
+~Preview~ panel. In GitHub's preview, the metadata will show as a table at the
+top of the article. This table will /not/ be displayed on the website.
+
+Here is an example of a newsletter entry:
+#+begin_src markdown
+---
+title: The New AXPDSP Website is Complete
+author: Reily Siegel
+position: Newsletter Editor
+date: 2023-06-01
+---
+
+Our Website has been completed!
+
+## A Subsection
+We are now inside a subsection.
+#+end_src
+
+Notice that the example has a section at the top surrounded by three dashes.
+This section is metadata that allows the newsletter builder to properly
+integrate the entry into the website. The date *MUST* be in ~yyyy-mm-dd~ format.
+For example, the date June 4, 1895 would be written as 1895-06-04.
+
+Once you are finished, click the green ~Propose new file~ button. This will
+create a request to add the entry to the website, and notify the Webmaster.
