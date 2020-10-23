@@ -34,7 +34,7 @@ We are now inside a subsection.
 Notice that the example has a section at the top surrounded by three dashes.
 This section is metadata that allows the newsletter builder to properly
 integrate the entry into the website. The date *MUST* be in ~yyyy-mm-dd~ format.
-For example, the date June 4, 1895 would be written as 1895-06-04.
+For example, the date June 4, 2020 would be written as 2020-06-04.
 
 Once you are finished, click the green ~Propose new file~ button. This will
 create a request to add the entry to the website, and notify the Webmaster.
