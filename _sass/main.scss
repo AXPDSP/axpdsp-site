@@ -2,14 +2,15 @@
 
 // Customization
 
+@use "../node_modules/react-responsive-carousel/lib/styles/carousel.min.css";
+
+
 // You can easily customize Bulma with your own variables.
 // Just uncomment the following block to see the result.
 
 
 // 1. Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
-
-
 // 2. Set your own initial variables
 // Update the blue shade, used for links
 // $blue: #06bcef;
@@ -117,9 +118,6 @@ section.section-with-sidebar {
 
 
 @import "../node_modules/bulma/bulma";
-//@import "../node_modules/bulma-carousel/dist/css/bulma-carousel.min.css";
-//@import "../node_modules/bulma-calendar/dist/css/bulma-calendar.min.css";
-
 
 @media (max-width: $tablet) {
 
@@ -285,4 +283,10 @@ section.section-with-sidebar {
     span {
         font-family: 'Roboto Condensed', sans-serif;
     } 
+}
+
+// Carousel
+
+.carousel .slide {
+    background: none;
 }

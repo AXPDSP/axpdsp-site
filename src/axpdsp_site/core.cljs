@@ -7,13 +7,15 @@
             [axpdsp-site.newsletter :as newsletter]
             [axpdsp-site.officers :as officers]
             [axpdsp-site.philanthropy :as philanthropy]
-            [axpdsp-site.recruitment :as recruitment]))
+            [axpdsp-site.recruitment :as recruitment]
+            [axpdsp-site.house :as house]))
 
 (defn ui []
   [:<>
    [hero/ui]
    [brotherhood/ui]
    [recruitment/ui]
+   #_[house/ui]
    [newsletter/ui]
    [philanthropy/ui]
    [officers/ui]

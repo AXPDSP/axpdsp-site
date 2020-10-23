@@ -1,5 +1,6 @@
 (ns axpdsp-site.brotherhood
-  (:require [axpdsp-site.data :as data]))
+  (:require [axpdsp-site.data :as data]
+            [axpdsp-site.components :as components]))
 
 (defn cycle-vector
   "Returns a new vector "
@@ -44,34 +45,12 @@
        [:blockquote.is-crow-quote
         [:b "ΑΝΔΡΙΖΕΣΘΕ"]
         " - \"Be Men\" - (Pronounced: An-DREE-zes-theh) "]]]
-     [:div.column.is-offset-1.is-5
-      [:figure.image.is-3by4
-       [:img {:src     "images/house.jpeg"
-              :loading :lazy
-              :alt     "Our House at 8 Boynton Street." }]]
-      [:div.has-text-centered.help
-       "Our House at 8 Boynton Street."]]
-     #_(let [{:brother/keys [name scroll bio grad-year exec-position major
-                             activities]
-              :as           brother}
-             (first @data/brothers)]
-         (when brother
-           [:div.column.is-offset-2.is-4
-            [:div.card
-             [:div.card-image
-              [:figure.image.is-4by5
-               [:img {:src         (str "images/brothers/" scroll ".jpeg")
-                      :alt         (str "Portrait of " name)
-                      :style       {:width "100%"}
-                      #_#_:onError (fn [e]
-                                     (set! (.-onerror (.-target e)) nil)
-                                     (set! (.-src (.-target e))
-                                           "https://via.placeholder.com/400x500"))}]]]
-             [:div.card-content
-              [:p.has-text-weight-semibold (str name " - " scroll)]
-              [:p exec-position]
-              [:p major]
-              [:p activities]
-              (when grad-year
-                [:p (str "Class of " grad-year)])
-              [:p bio]]]]))]]])
+     #_[:div.column.is-offset-1.is-5
+        [:figure.image.is-3by4
+         [:img {:src     "images/house.jpeg"
+                :loading :lazy
+                :alt     "Our House at 8 Boynton Street." }]]
+        [:div.has-text-centered.help
+         "Our House at 8 Boynton Street."]]
+     [:div.column.is-4.is-offset-2
+      [components/brother-bio-card (first @data/brothers)]]]]])
