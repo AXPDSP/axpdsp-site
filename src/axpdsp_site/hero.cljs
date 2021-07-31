@@ -21,10 +21,6 @@
                  :smooth true
                  :class  "button is-link is-inverted is-outlined anchor-link"}
         "Recruitment"]
-       [:> Link {:to     "newsletter"
-                 :smooth true
-                 :class  "button is-link is-inverted is-outlined anchor-link"}
-        "Newsletter"]
        [:> Link {:to     "philanthropy"
                  :smooth true
                  :class  "button is-link is-inverted is-outlined anchor-link"}

@@ -6,7 +6,5 @@
                          arttuka/reagent-material-ui {:mvn/version "4.11.0-3"}
                          reilysiegel/clojure-sheets
                          {:git/url "https://github.com/ReilySiegel/clojure-sheets"
-                          :sha     "acf141588304382f218046f15506c38e41152a3e"}}}
-           :build-newsletter
-           {:main-opts ["-m" "axpdsp-site.build.newsletter"]}}
+                          :sha     "acf141588304382f218046f15506c38e41152a3e"}}}}
  :paths   ["src" "resources"]}
