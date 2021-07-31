@@ -9,18 +9,18 @@
   [:president :vice-president :secretary :treasurer :house-manager :steward
    :social-officer :member-at-large :risk-manager])
 
-(defn brother->position [{:brother/keys [exec-position name]}]
-  (when exec-position
+(defn brother->position [{:keys [position name]}]
+  (when position
     (some identity
           ;; Reverse so that Vice President is checked before President
-          (for [position (reverse officers-order)] 
-            (when (str/includes? (str/lower-case exec-position)
-                                 (str/replace (clojure.core/name position)
+          (for [exec-position (reverse officers-order)]
+            (when (str/includes? (str/lower-case position)
+                                 (str/replace (clojure.core/name exec-position)
                                               #"-" " "))
-              position)))))
+              exec-position)))))
 
 (defn ui []
-  (let [officers (group-by brother->position @data/brothers)]
+  (let [officers (dissoc (group-by brother->position @data/brothers) nil)]
     [:section.section.section-with-sidebar.has-background-light
      {:id :officers}
      [:div.columns.is-marginless
@@ -36,7 +36,7 @@
                 :let
                 [brother (first (position officers))]
                 :when    brother
-                :let     [key (:brother/scroll brother)]]
+                :let     [key (:scroll brother)]]
             ^{:key key}
             [:div.column.is-one-third
              [components/brother-contact-card brother]]))]]]]))

@@ -10,6 +10,7 @@
      (for [{:rush.event/keys      [name location link]
             :rush.event.date/keys [month day]}
            (sort-by :rush.event/date rush-events)]
+       ^{:key (str name month day)}
        [:div.column.is-4
         [:div.card
          [:div.card-content
@@ -20,13 +21,13 @@
             [:p location])]]])]))
 
 (defn ui []
-  (let [rush-person? (fn [{:keys [brother/exec-position]}]
-                       (let [position (str/lower-case (or exec-position ""))]
+  (let [rush-person? (fn [{:keys [position]}]
+                       (let [position (str/lower-case (or position ""))]
                          (or (str/includes? position "rush")
                              (= position "president"))))
         rush-people  (->> @data/brothers
                           (filter rush-person?)
-                          (sort-by :brother/scroll))]
+                          (sort-by :scroll))]
     [:<>
      [:section.section.is-small {:id "recruitment"}
       [:div.container
@@ -50,8 +51,8 @@
          {:href "https://discord.gg/7gd29yP"}
          "Join our Discord"]]
        [:div.columns.is-variable.is-8
-        (for [{:brother/keys [scroll]
-               :as           rush-person} rush-people]
-          ^{:key scroll}
+        (for [{:keys [scroll]
+               :as   rush-person} rush-people]
           [:div.column.is-4
+           {:key scroll}
            [components/brother-contact-card rush-person]])]]]]))
