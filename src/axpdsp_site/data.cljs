@@ -10,8 +10,8 @@
 
 (a/go (let [brothers-res (sheets/sheet->map
                           "1XL-bbECqaFvlojrRz2g-K_jrusmd8sz0Pj-qoycakdo"
-                          {:page   2
-                           :key-fn sheets.key-fns/idiomatic-keyword})]
+                          "Newest Responses"
+                          {:key-fn sheets.key-fns/idiomatic-keyword})]
         (reset! brothers
                 (->> (a/<! brothers-res)
                      (filter
@@ -20,14 +20,8 @@
                      shuffle
                      vec))))
 
-(a/go (let [house-res (sheets/sheet->map
-                       "1o7fckgforDgA_YYQkBFjZtVr7Z2U19DJsnwG5MrMEJE"
-                       {:key-fn sheets.key-fns/idiomatic-keyword
-                        :page   2})]
-        (reset! house-pictures (a/<! house-res))))
-
 (a/go (let [rush-res (sheets/sheet->map
-                      "1o7fckgforDgA_YYQkBFjZtVr7Z2U19DJsnwG5MrMEJE"
-                      {:key-fn sheets.key-fns/idiomatic-keyword
-                       :page   3})]
+                      "1El7AF_OReo2qZqSrskB6DAAkN-v6EHchO-pP8ch1xD8"
+                      nil
+                      {:key-fn sheets.key-fns/idiomatic-keyword})]
         (reset! rush-events (a/<! rush-res))))
