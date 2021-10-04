@@ -9,7 +9,7 @@
     [:div.columns.is-multiline
      (for [{:rush.event/keys      [name location link]
             :rush.event.date/keys [month day]}
-           (sort-by :rush.event/date rush-events)]
+           rush-events]
        ^{:key (str name month day)}
        [:div.column.is-4
         [:div.card
