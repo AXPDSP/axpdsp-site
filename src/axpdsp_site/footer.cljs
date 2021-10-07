@@ -5,7 +5,7 @@
    [:section.section
     [:div.container.has-text-centered
      [:p.subtitle
-      "For enquiries, please send an email to "
+      "For inquiries, please send an email to "
       [:a {:href "mailto:axp-chapercorr@wpi.edu"}
        "axp-chapercorr@wpi.edu"]]]]
    [:footer.footer.has-background-white
@@ -22,7 +22,7 @@
       [:div.column.is-3
        [:h2 [:strong "Graduate Chapter"]]
        [:ul
-        [:li [:a {:href "http://www.axpdspgrads.com/"} "Graduate Webside"]]]]
+        [:li [:a {:href "http://www.axpdspgrads.com/"} "Graduate Website"]]]]
       [:div.column.is-4
        [:h2 [:strong "National Fraternity"]]
        [:ul
