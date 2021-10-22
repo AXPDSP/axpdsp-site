@@ -14,14 +14,14 @@
   ^{:doc "A timer to update the brother shown every 7.5 seconds"}
   brother-cycle
   (js/setInterval (fn []
-                    (prn swap!)
-                    (swap! data/brothers cycle-vector))
+                    (swap! data/brothers cycle-brothers))
                   7500))
 
 (defn ui []
   (let [brother (first @data/brothers)]
     [:section.section.is-small.has-background-light.is-flex
-     {:id "brotherhood" :style {:min-height "100vh"}}
+     {:id "brotherhood" :style {:min-height "100vh"
+                                :max-width  "100vw"}}
      [:div.container.is-flex.is-vcentered
       [:div.columns.is-vcentered
        [:div.column.is-6

@@ -21,13 +21,9 @@
             [:p location])]]])]))
 
 (defn ui []
-  (let [rush-person? (fn [{:keys [position]}]
-                       (let [position (str/lower-case (or position ""))]
-                         (or (str/includes? position "rush")
-                             (= position "president"))))
-        rush-people  (->> @data/brothers
-                          (filter rush-person?)
-                          (sort-by :scroll))]
+  (let [rush-people (data/with-positions
+                      ["Senior Rush Chairman" "President" "Junior Rush Chairman"]
+                      @data/brothers)]
     [:<>
      [:section.section.is-small {:id "recruitment"}
       [:div.container

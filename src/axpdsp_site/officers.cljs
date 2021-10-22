@@ -6,21 +6,11 @@
 
 (def officers-order
   "Defines the order in which officers are displayed."
-  [:president :vice-president :secretary :treasurer :house-manager :steward
-   :social-officer :member-at-large :risk-manager])
-
-(defn brother->position [{:keys [position name]}]
-  (when position
-    (some identity
-          ;; Reverse so that Vice President is checked before President
-          (for [exec-position (reverse officers-order)]
-            (when (str/includes? (str/lower-case position)
-                                 (str/replace (clojure.core/name exec-position)
-                                              #"-" " "))
-              exec-position)))))
+  ["President" "Vice President" "Secretary" "Treasurer" "House Manager" "Steward"
+   "Social Officer" "Member-at-Large" "Risk Management Officer"])
 
 (defn ui []
-  (let [officers (dissoc (group-by brother->position @data/brothers) nil)]
+  (let [brothers @data/brothers]
     [:section.section.section-with-sidebar.has-background-light
      {:id :officers}
      [:div.columns.is-marginless
@@ -31,12 +21,9 @@
       [:div.column
        {:style {:padding "4rem"}}
        [:div.columns.is-multiline.is-8.is-variable
-        (when officers
-          (for [position officers-order
-                :let
-                [brother (first (position officers))]
-                :when    brother
-                :let     [key (:scroll brother)]]
+        (when brothers
+          (for [brother (data/with-positions officers-order brothers)
+                :let    [key (:scroll brother)]]
             ^{:key key}
             [:div.column.is-one-third
              [components/brother-contact-card brother]]))]]]]))

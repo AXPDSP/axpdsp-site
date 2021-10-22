@@ -6,15 +6,13 @@
             [axpdsp-site.footer :as footer]
             [axpdsp-site.officers :as officers]
             [axpdsp-site.philanthropy :as philanthropy]
-            [axpdsp-site.recruitment :as recruitment]
-            [axpdsp-site.house :as house]))
+            [axpdsp-site.recruitment :as recruitment]))
 
 (defn ui []
   [:<>
    [hero/ui]
    [brotherhood/ui]
    [recruitment/ui]
-   #_[house/ui]
    [philanthropy/ui]
    [officers/ui]
    [footer/ui]])
