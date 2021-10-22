@@ -1,9 +1,8 @@
 {:deps    {markdown-clj {:mvn/version "1.10.2"}}
  :aliases {:cljs
-           {:extra-deps {thheller/shadow-cljs        {:mvn/version "2.8.83"}
-                         reagent                     {:mvn/version "0.10.0"}
-                         re-frame                    {:mvn/version "RELEASE"}
-                         arttuka/reagent-material-ui {:mvn/version "4.11.0-3"}
+           {:extra-deps {thheller/shadow-cljs {:mvn/version "2.8.83"}
+                         reagent              {:mvn/version "0.10.0"}
+                         re-frame             {:mvn/version "RELEASE"}
                          reilysiegel/clojure-sheets
                          {:git/url "https://github.com/ReilySiegel/clojure-sheets"
                           :sha     "464fab2e85beb245ae2f73e95ce5ad48e2078e9c"}}}}

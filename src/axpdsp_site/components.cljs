@@ -19,7 +19,7 @@
                   :onError (fn [e]
                              (reset! error true))}]]])
        [:div.card-content
-        [:p.has-text-weight-semibold (str name " - " scroll)]
+        [:p.has-text-weight-semibold  name]
         [:p (str/join ", " positions)]
         (when school-email
           [:a {:href (str "mailto:" school-email)}
