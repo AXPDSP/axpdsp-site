@@ -12,7 +12,6 @@
       (conj v head))))
 
 (defn cycle-brothers [brothers]
-  (prn (empty? (:portrait (first (cycle-vector brothers)))))
   (if-not (empty? (:portrait (first (cycle-vector brothers))))
     (cycle-vector brothers)
     (cycle-brothers (cycle-vector brothers))))
