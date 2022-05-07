@@ -28,7 +28,11 @@
        [:> Link {:to     "officers"
                  :smooth true
                  :class  "button is-link is-inverted is-outlined anchor-link"}
-        "Our Officers"]]]]]
+        "Our Officers"]
+       [:> Link {:to     "brothers"
+                 :smooth true
+                 :class  "button is-link is-inverted is-outlined anchor-link"}
+        "Our Brothers"]]]]]
    [:div.hero-footer.has-text-centered
     [:> Link {:to     "brotherhood"
               :smooth true

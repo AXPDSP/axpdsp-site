@@ -5,6 +5,7 @@
             [axpdsp-site.brotherhood :as brotherhood]
             [axpdsp-site.footer :as footer]
             [axpdsp-site.officers :as officers]
+            [axpdsp-site.brothers :as brothers]
             [axpdsp-site.philanthropy :as philanthropy]
             [axpdsp-site.recruitment :as recruitment]))
 
@@ -15,6 +16,7 @@
    [recruitment/ui]
    [philanthropy/ui]
    [officers/ui]
+   [brothers/ui]
    [footer/ui]])
 
 (defn render
