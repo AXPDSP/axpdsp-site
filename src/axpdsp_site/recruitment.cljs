@@ -44,7 +44,7 @@
        [:div.content.has-text-centered
         [:h1 "Your Rush Contacts"]
         [:a.button
-         {:href "https://discord.gg/pJAcKTjeMG"}
+         {:href "https://discord.gg/2Actm344tN"}
          "Join our Discord"]]
        [:div.columns.is-variable.is-8
         (for [{:keys [scroll]
