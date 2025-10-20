@@ -16,9 +16,8 @@
          "Habitat for Humanity."]]]]
      [:div.column.is-offset-1.is-5
       [:figure.image.is-4by3
-       [:img {:src     "images/group/arthritis_walk.jpeg"
+       [:img {:src     "images/group/restore_shift.jpeg"
               :loading :lazy
-              :alt "Alpha Chi Rho Brothers at Arthritis Foundation's Walk for a
-              Cure in Worcester, MA" }]]
+              :alt "Alpha Chi Rho Brothers at a Habitat for Humanity ReStore shift" }]]
       [:div.has-text-centered.help
        "Arthritis Foundation's Walk for a Cure, Worcester, MA"]]]]])
