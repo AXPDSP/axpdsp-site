@@ -16,7 +16,7 @@
          "Habitat for Humanity."]]]]
      [:div.column.is-offset-1.is-5
       [:figure.image.is-4by3
-       [:img {:src     "images/group/restore_shift.jpeg"
+       [:img {:src     "images/group/restore_shift.jpg"
               :loading :lazy
               :alt "Alpha Chi Rho Brothers at a Habitat for Humanity ReStore shift" }]]
       [:div.has-text-centered.help
