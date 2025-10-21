@@ -22,7 +22,7 @@
 
 (defn ui []
   (let [rush-people (data/with-positions
-                      ["Senior Rush Chairman" "President" "Junior Rush Chairman"]
+                      ["Rush Officer" "President" "Assistant Rush Officer"]
                       @data/brothers)]
     [:<>
      [:section.section.is-small {:id "recruitment"}
