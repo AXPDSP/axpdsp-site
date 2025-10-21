@@ -20,4 +20,4 @@
               :loading :lazy
               :alt "Alpha Chi Rho Brothers at a Habitat for Humanity ReStore shift" }]]
       [:div.has-text-centered.help
-       "Arthritis Foundation's Walk for a Cure, Worcester, MA"]]]]])
+       "Alpha Chi Rho Brothers at a Habitat for Humanity ReStore shift"]]]]])
